@@ -27,7 +27,7 @@ const Result = () => {
     .reduce((prev, curr) => prev + curr, 0);
 
   const data = {
-    labels: ["Democrat", "Republican"],
+    labels: ["Anya", "Renge"],
     datasets: [
       {
         label: "# of Votes",
