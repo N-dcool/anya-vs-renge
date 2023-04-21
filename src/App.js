@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import VotingCard from "./components/VotingCard";
+import "./assets/scss/styles.scss";
+import "bootstrap/dist/css/bootstrap.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <h1>Share for your favorite Voice </h1>
+      <Row>
+        <Col>
+          <VotingCard
+            title="Vote for “waku waku!” (translated as “How exciting!”)"
+            buttonName="Anya Forger"
+            song="waku"
+          />
+        </Col>
+        <Col>
+          <VotingCard
+            title="Vote for “Nyanpasu!” (translated as “Good Morning”)"
+            buttonName="Renge Miyauchi"
+            song="nya"
+          />
+        </Col>
+      </Row>
+    </Container>
   );
 }
-
 export default App;
